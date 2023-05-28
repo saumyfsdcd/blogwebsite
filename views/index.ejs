@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body,html{
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .hero{
+            margin-top: 20px;
+            margin-left: 80px;
+            width: 49vw;
+        }
+
+        .k{
+            font-size: 40px;
+        }
+
+        p{
+            color: rgb(40, 40, 40);
+        }
+
+        .s{
+            height: 100vh;
+        }
+
+        @media only screen and (max-width: 950px){
+            .hero{
+                width: 50vw;
+            }
+        }
+
+        @media only screen and(max-width: 700px){
+
+        }
+    </style>
+</head>
+<body>
+    <%- include("header")%>
+
+    <div class="hero">
+        <h1 class="k">Home</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo sit reiciendis in praesentium commodi maiores temporibus cumque vitae nobis? Beatae error provident, iure consequatur voluptas dolorum quas architecto veniam nulla.</p>
+
+        <br><br>
+
+        <%blogs.forEach((data)=>{%>
+            <h1><%=data.title%></h1>
+            <p><%=data.description%></p>
+        <%})%>
+    </div>
+</body>
+</html>

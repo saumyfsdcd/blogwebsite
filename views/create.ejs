@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <style>
+        .hero {
+            margin-left: 80px;
+        }
+
+        .j {
+            font-size: 40px;
+        }
+
+        textarea {
+            width: 400px;
+        }
+        
+        input{
+            width: 400px;
+            padding: 10px;
+        }
+
+        .d{
+            height: 200px;
+            width: 600px;
+        }
+
+        button{
+            background-color: rgb(23, 91, 237);
+            border: 1px solid rgb(23, 91, 237);
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        @media only screen and (max-width: 950px){
+            p{
+                width: 600px;
+            }
+        }
+
+        @media only screen and (max-width: 506px){
+            input{
+                width: 50vw;
+                height: 3vh;
+            }
+
+            textarea{
+                width: 60vw;
+            }
+            .hero{
+                text-align: center;
+                margin-left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <%-include("header")%>
+        <div class="hero">
+            <form action="/" method="post">
+
+                <h1 class="j">Title</h1>
+                <input type="text" name="title">
+
+                <h1>Description</h1>
+                <textarea name="desc" id="" cols="50" rows="15"></textarea>
+                <!-- <br> -->
+                <br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+</body>
+
+</html>
